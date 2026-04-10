@@ -1,131 +1,241 @@
-<!doctype html>
-<html>
-
-<head> 
-<title>
-	mallisivu
-</title>
-
-<style>
-
-	#otsikko {
-	font-size : 33px;
-        color : #67ddddd;
-       padding : 20px;
-	border : solid 3px #ff0000
-	widht: 500px;
-	//height : 50px;
-	text-align : center;
-	border-radius : 10px;
-       background : #dddddd ;
-	font-family : arial ;
-	text-decoration : underline;
-	font-weight : bold;
-	position : absolute;
-	top:50px;
-	left : 300px;
-	}
-
-	#linkit {
-	font-size : 20;
-        color : #121212;
-       padding : 20px;
-	border : dotted 2px #0000ff;
-	widht: 100px;
-	height : 150px;
-	text-align : center;
-	border-radius : 5px;
-    	//background : #dddddd;
-	font-family : arial;
-	position : absolute;
-	top:150px;
-	left : 50px;
-	}
-
-
-
-	linkki {
-		text-decoration : none;
-		color000000;
-	}
-
-	.linkki:visited
-		color: #000000;
- 	}
-
-	.linkki:hover{
-		color:#000000ff;
-		text-decoration : underline;
-		font-size : 19px;
-		background : #454545;
-
-	}
-
-
-	#keskilaatikko {
-		  
-		font-size : 18px;
-        color : #121212;
-       padding : 20px;
-	border : solid 0px #ff0000
-	widht: 600px;
-	height : 300px;
-	border-radius : 10px;
-       background : #eeeeee ;
-	font-weight : bold;
-	position : absolute;
-	top:150px;
-	left : 250px;
-	overflow : auto;
-     }
-
-	
-      body {
-		background : #dddddd;			// url ("auto.webp");
-		background-repeat : no-repeat;
-		background-position: 20px 30px;
-		background-size: cover;
-
-	}
-</style>
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Madrid CF | Digital Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .rm-blue { background-color: #004595; }
+        .rm-gold { color: #C1A14E; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.4s ease-out; }
+        .player-card:hover .player-img { transform: scale(1.05); }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
 </head>
+<body class="bg-gray-100 text-gray-900">
 
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 py-4 px-8 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-blue-900 rounded-lg flex items-center justify-center text-white text-xl">
+                <i class="fas fa-crown"></i>
+            </div>
+            <h1 class="text-xl font-black tracking-tighter uppercase text-blue-900">Real Madrid</h1>
+        </div>
+        <div class="hidden md:flex gap-10 font-bold text-xs uppercase tracking-[0.2em]">
+            <button onclick="showTab('home')" class="hover:text-blue-700 transition duration-300">Home</button>
+            <button onclick="showTab('squad')" class="hover:text-blue-700 transition duration-300">The Squad</button>
+            <button onclick="showTab('stats')" class="hover:text-blue-700 transition duration-300">History</button>
+        </div>
+        <button class="bg-yellow-500 text-blue-900 px-6 py-2 rounded-full font-black text-xs hover:bg-yellow-400 transition shadow-lg">SHOP</button>
+    </nav>
 
-<body>
+    <div id="home" class="tab-content active">
+        <div class="relative h-[85vh] flex items-center px-12 text-white overflow-hidden bg-black">
+            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2000" class="absolute inset-0 w-full h-full object-cover opacity-40" alt="Stadium">
+            <div class="relative z-10 max-w-3xl">
+                <p class="text-yellow-500 font-bold tracking-[0.4em] uppercase mb-4">Official Club Portal</p>
+                <h2 class="text-7xl md:text-9xl font-black leading-none mb-8">MADRIDISTA <br>PRIDE.</h2>
+                <div class="flex gap-4">
+                    <button onclick="showTab('squad')" class="bg-blue-700 hover:bg-blue-600 px-8 py-4 font-bold uppercase text-sm transition">Meet the Team</button>
+                    <button class="border-2 border-white hover:bg-white hover:text-black px-8 py-4 font-bold uppercase text-sm transition">Latest News</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-         <div id="otsikko">
-                 roadman central
+    <div id="squad" class="tab-content py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-black uppercase italic text-blue-900">The First Team</h2>
+            <div class="w-24 h-2 bg-yellow-500 mx-auto mt-4"></div>
         </div>
 
-	<div id="linkit">
-	<a href="https://www.youtube.com">linkki 1</a><br />
-	<a href_"https://www.mtv3.fi">linkki 2</a><br />
-	<a href="tokasivu.html">linkki 3</a><br />
-	<a href="ekasivu.html">linkki 4</a><br />
-	</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="player-card bg-white rounded-3xl shadow-2xl overflow-hidden transition-all duration-500">
+                <div class="h-80 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=800" class="player-img w-full h-full object-cover transition-transform duration-700" alt="Vini Jr">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 to-transparent"></div>
+                    <div class="absolute bottom-6 left-8 text-white">
+                        <span class="text-5xl font-black italic opacity-30">7</span>
+                        <h3 class="text-3xl font-black uppercase">Vini Jr.</h3>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between text-xs font-black text-gray-400 tracking-widest uppercase mb-4">
+                        <span>Forward</span> <span>Age: 25</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 border-t border-gray-100 pt-6">
+                        <div class="text-center"><p class="text-2xl font-black text-blue-900">24</p><p class="text-[10px] text-gray-400 uppercase">Goals</p></div>
+                        <div class="text-center"><p class="text-2xl font-black text-blue-900">11</p><p class="text-[10px] text-gray-400 uppercase">Assists</p></div>
+                        <div class="text-center"><p class="text-2xl font-black text-blue-900">97</p><p class="text-[10px] text-gray-400 uppercase">Pace</p></div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="player-card bg-white rounded-3xl shadow-2xl overflow-hidden transition-all duration-500">
+                <div class="h-80 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=800" class="player-img w-full h-full object-cover transition-transform duration-700" alt="Mbappe">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 to-transparent"></div>
+                    <div class="absolute bottom-6 left-8 text-white">
+                        <span class="text-5xl font-black italic opacity-30">9</span>
+                        <h3 class="text-3xl font-black uppercase">K. Mbappé</h3>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between text-xs font-black text-gray-400 tracking-widest uppercase mb-4">
+                        <span>Forward</span> <span>Age: 27</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 border-t border-gray-100 pt-6">
+                        <div class="text-center"><p class="text-2xl font-black text-blue-900">28</p><p class="text-[10px] text-gray-400 uppercase">Goals</p></div>
+                        <div class="text-center"><p class="text-2xl font-black text-blue-900">08</p><p class="text-[10px] text-gray-400 uppercase">Assists</p></div>
+                        <div class="text-center"><p class="text-2xl font-black text-blue-900">99</p><p class="text-[10px] text-gray-400 uppercase">Speed</p></div>
+                    </div>
+                </div>
+            </div>
 
-	   <div id="keskilaatikko">
-                 tähän tulee minun otsikko <br />
+            <div class="player-card bg-white rounded-3xl shadow-2xl overflow-hidden transition-all duration-500">
+                <div class="h-80 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=800" class="player-img w-full h-full object-cover transition-transform duration-700" alt="Bellingham">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 to-transparent"></div>
+                    <div class="absolute bottom-6 left-8 text-white">
+                        <span class="text-5xl font-black italic opacity-30">5</span>
+                        <h3 class="text-3xl font-black uppercase">Bellingham</h3>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between text-xs font-black text-gray-400 tracking-widest uppercase mb-4">
+                        <span>Midfield</span> <span>Age: 22</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 border-t border-gray-100 pt-6">
+                        <div class="text-center"><p class="text-2xl font-black text-blue-900">18</p><p class="text-[10px] text-gray-400 uppercase">Goals</p></div>
+                        <div class="text-center"><p class="text-2xl font-black text-blue-900">92%</p><p class="text-[10px] text-gray-400 uppercase">Passes</p></div>
+                        <div class="text-center"><p class="text-2xl font-black text-blue-900">12km</p><p class="text-[10px] text-gray-400 uppercase">Work</p></div>
+                    </div>
+                </div>
+            </div>
 
-		tähän tulee minun otsikko <br />
+            <div class="player-card bg-white rounded-3xl shadow-2xl overflow-hidden transition-all duration-500">
+                <div class="h-80 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1575361204480-aadea25e6e68?q=80&w=800" class="player-img w-full h-full object-cover transition-transform duration-700" alt="Valverde">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 to-transparent"></div>
+                    <div class="absolute bottom-6 left-8 text-white">
+                        <span class="text-5xl font-black italic opacity-30">8</span>
+                        <h3 class="text-3xl font-black uppercase">F. Valverde</h3>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between text-xs font-black text-gray-400 tracking-widest uppercase mb-4">
+                        <span>Midfield</span> <span>Age: 27</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 border-t border-gray-100 pt-6">
+                        <div class="text-center"><p class="text-2xl font-black text-blue-900">07</p><p class="text-[10px] text-gray-400 uppercase">Goals</p></div>
+                        <div class="text-center"><p class="text-2xl font-black text-blue-900">114</p><p class="text-[10px] text-gray-400 uppercase">Shots</p></div>
+                        <div class="text-center"><p class="text-2xl font-black text-blue-900">99</p><p class="text-[10px] text-gray-400 uppercase">Power</p></div>
+                    </div>
+                </div>
+            </div>
 
-		tähän tulee minun otsikko <br />
+            <div class="player-card bg-white rounded-3xl shadow-2xl overflow-hidden transition-all duration-500">
+                <div class="h-80 overflow-hidden relative">
+                    <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQw7_j9Ydtpi6TifuvfpvrQstrIKCYWWPJLW0c3h_KPSzGZqVyCOrjWcOZFme_i92xt_achtNK_YuQTcQVroMl5Nxwa_10w5WWKDEvBpFvgp7Xc6uHLmUMfj2b45V1_ZVaM6HLPra7Uo-lR&s=190" class="player-img w-full h-full object-cover transition-transform duration-700" alt="Rodrygo">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 to-transparent"></div>
+                    <div class="absolute bottom-6 left-8 text-white">
+                        <span class="text-5xl font-black italic opacity-30">11</span>
+                        <h3 class="text-3xl font-black uppercase">Rodrygo</h3>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between text-xs font-black text-gray-400 tracking-widest uppercase mb-4">
+                        <span>Forward</span> <span>Age: 25</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 border-t border-gray-100 pt-6">
+                        <div class="text-center"><p class="text-2xl font-black text-blue-900">14</p><p class="text-[10px] text-gray-400 uppercase">Goals</p></div>
+                        <div class="text-center"><p class="text-2xl font-black text-blue-900">09</p><p class="text-[10px] text-gray-400 uppercase">Assists</p></div>
+                        <div class="text-center"><p class="text-2xl font-black text-blue-900">91</p><p class="text-[10px] text-gray-400 uppercase">Dribble</p></div>
+                    </div>
+                </div>
+            </div>
 
-		tähän tulee minun otsikko <br />
-
-		
-		
-
-
-
-
+            <div class="player-card bg-white rounded-3xl shadow-2xl overflow-hidden transition-all duration-500">
+                <div class="h-80 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=800" class="player-img w-full h-full object-cover transition-transform duration-700" alt="Militao">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 to-transparent"></div>
+                    <div class="absolute bottom-6 left-8 text-white">
+                        <span class="text-5xl font-black italic opacity-30">3</span>
+                        <h3 class="text-3xl font-black uppercase">E. Militão</h3>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between text-xs font-black text-gray-400 tracking-widest uppercase mb-4">
+                        <span>Defender</span> <span>Age: 28</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 border-t border-gray-100 pt-6">
+                        <div class="text-center"><p class="text-2xl font-black text-blue-900">82</p><p class="text-[10px] text-gray-400 uppercase">Tackles</p></div>
+                        <div class="text-center"><p class="text-2xl font-black text-blue-900">15</p><p class="text-[10px] text-gray-400 uppercase">Blocks</p></div>
+                        <div class="text-center"><p class="text-2xl font-black text-blue-900">95</p><p class="text-[10px] text-gray-400 uppercase">Air</p></div>
+                    </div>
+                </div>
+            </div>
 
         </div>
+    </div>
 
+    <div id="stats" class="tab-content py-20 bg-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="text-6xl font-black uppercase italic mb-6">Unrivaled <br>Legacy.</h2>
+                <p class="text-blue-200 text-lg mb-8 leading-relaxed">With 15 European Cups and a history that spans over a century, Real Madrid is not just a club—it is a global standard for excellence.</p>
+                <button class="bg-white text-blue-900 px-8 py-4 font-bold uppercase tracking-widest">Full Trophy Room</button>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-blue-800 p-10 rounded-2xl text-center border border-blue-700">
+                    <h4 class="text-5xl font-black text-yellow-500 mb-2">15</h4>
+                    <p class="text-xs uppercase tracking-tighter opacity-60">UCL Trophies</p>
+                </div>
+                <div class="bg-blue-800 p-10 rounded-2xl text-center border border-blue-700">
+                    <h4 class="text-5xl font-black text-yellow-500 mb-2">36</h4>
+                    <p class="text-xs uppercase tracking-tighter opacity-60">La Liga</p>
+                </div>
+                <div class="bg-blue-800 p-10 rounded-2xl text-center border border-blue-700">
+                    <h4 class="text-5xl font-black text-yellow-500 mb-2">20</h4>
+                    <p class="text-xs uppercase tracking-tighter opacity-60">Copa Del Rey</p>
+                </div>
+                <div class="bg-blue-800 p-10 rounded-2xl text-center border border-blue-700">
+                    <h4 class="text-5xl font-black text-yellow-500 mb-2">13</h4>
+                    <p class="text-xs uppercase tracking-tighter opacity-60">Super Cups</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <footer class="bg-zinc-950 text-white py-16 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center opacity-50">
+            <p class="text-sm font-bold uppercase tracking-widest">Real Madrid C.F. Official Prototype</p>
+            <div class="flex gap-8 text-2xl mt-8 md:mt-0">
+                <i class="fab fa-instagram hover:text-pink-500 cursor-pointer transition"></i>
+                <i class="fab fa-tiktok hover:text-cyan-400 cursor-pointer transition"></i>
+                <i class="fab fa-youtube hover:text-red-600 cursor-pointer transition"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab content
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Show the clicked tab content
+            document.getElementById(tabId).classList.add('active');
+            
+            // Smoothly scroll back to the top of the new tab
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
-
-</html>p
+</html>

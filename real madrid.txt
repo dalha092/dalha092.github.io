@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Real Madrid Fortinite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #0a1f44;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #fff;
+            padding: 10px;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0a1f44;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px;
+            margin: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #0a1f44;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #0a1f44;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Real Madrid Fanisivu</h1>
+    <p>Yksi maailman suurimmista jalkapalloseuroista</p>
+</header>
+
+<nav>
+    <a href="#maalit">Maalit</a>
+    <a href="#pokaalit">Pokaalit</a>
+    <a href="#pelaajat">Pelaajat</a>
+</nav>
+
+<section id="maalit">
+    <h2>⚽ Maalit & Goal Scoring</h2>
+    <p>
+        Real Madrid on tunnettu hyökkäävästä pelityylistään ja tehokkaasta maalinteosta.
+    </p>
+    <ul>
+        <li>Seura on tehnyt tuhansia maaleja historiansa aikana</li>
+        <li>Nopea vastahyökkäyspeli</li>
+        <li>Vahvat hyökkääjät ja laitapelaajat</li>
+        <li>Legendaarisia maalintekijöitä kuten Cristiano Ronaldo</li>
+    </ul>
+</section>
+
+<section id="pokaalit">
+    <h2>🏆 Pokaalit & Saavutukset</h2>
+    <ul>
+        <li>La Liga mestaruuksia: 30+</li>
+        <li>Champions League voittoja: 14+</li>
+        <li>Copa del Rey -voitot</li>
+        <li>FIFA Club World Cup -voitot</li>
+    </ul>
+</section>
+
+<section id="pelaajat">
+    <h2>👥 Nykyiset Pelaajat</h2>
+    <ul>
+        <li>Jude Bellingham</li>
+        <li>Vinícius Jr.</li>
+        <li>Rodrygo</li>
+        <li>Luka Modrić</li>
+        <li>Toni Kroos</li>
+        <li>Eduardo Camavinga</li>
+        <li>Federico Valverde</li>
+        <li>Thibaut Courtois</li>
+    </ul>
+</section>
+
+<footer>
+    <p>© 2026 Real Madrid fanisivu</p>
+</footer>
+
+</body>
+</html>
